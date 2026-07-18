@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kết quả tìm kiếm tour | VietTrail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="search-results.html" class="brand"><span class="brand-mark">✈</span> Việt<span class="brand-accent">Trail</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="search-results.html" class="active">Tìm tour</a>
+      <a href="#">Điểm đến</a>
+      <a href="#">Về chúng tôi</a>
+      <a href="#">Liên hệ</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Tìm kiếm"><i class="bi bi-search"></i></button>
+      <a href="profile.html" class="icon-btn" aria-label="Tài khoản"><i class="bi bi-person-circle"></i></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Mở menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MAIN ============ -->
+<main class="container py-4">
+
+  <!-- Thanh tìm kiếm + từ khóa -->
+  <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-3">
+    <div>
+      <p class="eyebrow mb-2">Kết quả tìm kiếm</p>
+      <h1 class="section-title mb-1">Từ khóa: “<span class="text-sunset">Đà Nẵng biển đảo</span>”</h1>
+      <p class="text-muted-vt mb-0" id="resultCount">Tìm thấy <strong>18 tour</strong> phù hợp</p>
+    </div>
+    <form class="d-flex gap-2" style="max-width:420px;width:100%;">
+      <input type="text" class="form-control form-control-vt" placeholder="Tìm điểm đến, tên tour..." value="Đà Nẵng biển đảo">
+      <button class="btn btn-vt-primary flex-shrink-0" type="submit"><i class="bi bi-search me-1"></i>Tìm</button>
+    </form>
+  </div>
+
+  <!-- Tag bộ lọc đang chọn -->
+  <div class="d-flex flex-wrap align-items-center gap-2 mb-4" id="activeFilters">
+    <span class="text-muted-vt fw-semibold small me-1">Đang lọc:</span>
+    <span class="chip">Đà Nẵng <button aria-label="Xoá bộ lọc"><i class="bi bi-x"></i></button></span>
+    <span class="chip">4-6 ngày <button aria-label="Xoá bộ lọc"><i class="bi bi-x"></i></button></span>
+    <span class="chip">3.000.000₫ - 8.000.000₫ <button aria-label="Xoá bộ lọc"><i class="bi bi-x"></i></button></span>
+    <span class="chip">4 sao trở lên <button aria-label="Xoá bộ lọc"><i class="bi bi-x"></i></button></span>
+    <button class="btn btn-vt-ghost btn-sm ms-1">Xoá tất cả</button>
+  </div>
+
+  <div class="row g-4">
+    <!-- ============ SIDEBAR BỘ LỌC ============ -->
+    <aside class="col-lg-3">
+      <div class="filter-box">
+        <div class="filter-title">Điểm đến <i class="bi bi-chevron-up small"></i></div>
+        <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="dd1" checked><label class="form-check-label small" for="dd1">Đà Nẵng (18)</label></div>
+        <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="dd2"><label class="form-check-label small" for="dd2">Hội An (12)</label></div>
+        <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="dd3"><label class="form-check-label small" for="dd3">Phú Quốc (9)</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="dd4"><label class="form-check-label small" for="dd4">Nha Trang (14)</label></div>
+      </div>
+
+      <div class="filter-box">
+        <div class="filter-title">Khoảng giá <i class="bi bi-chevron-up small"></i></div>
+        <input type="range" class="form-range" min="0" max="100">
+        <div class="d-flex justify-content-between small text-muted-vt"><span>1 triệu</span><span>15 triệu</span></div>
+      </div>
+
+      <div class="filter-box">
+        <div class="filter-title">Thời gian tour <i class="bi bi-chevron-up small"></i></div>
+        <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="tg1"><label class="form-check-label small" for="tg1">1-3 ngày</label></div>
+        <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="tg2" checked><label class="form-check-label small" for="tg2">4-6 ngày</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="tg3"><label class="form-check-label small" for="tg3">7 ngày trở lên</label></div>
+      </div>
+
+      <div class="filter-box">
+        <div class="filter-title">Đánh giá <i class="bi bi-chevron-up small"></i></div>
+        <div class="form-check mb-2"><input class="form-check-input" type="radio" name="rate" id="r1" checked><label class="form-check-label small stars" for="r1">★★★★★ trở lên</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="rate" id="r2"><label class="form-check-label small stars" for="r2">★★★★☆ trở lên</label></div>
+      </div>
+
+      <div class="filter-box">
+        <div class="filter-title">Phương tiện <i class="bi bi-chevron-up small"></i></div>
+        <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="pt1"><label class="form-check-label small" for="pt1">Máy bay</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="pt2"><label class="form-check-label small" for="pt2">Xe du lịch</label></div>
+      </div>
+
+      <button class="btn btn-vt-primary w-100 mt-1">Áp dụng bộ lọc</button>
+    </aside>
+
+    <!-- ============ DANH SÁCH KẾT QUẢ ============ -->
+    <section class="col-lg-9">
+
+      <!-- Thanh sắp xếp -->
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+        <div class="text-muted-vt small">Hiển thị 1–6 trong tổng số 18 kết quả</div>
+        <div class="d-flex align-items-center gap-2">
+          <label class="small text-muted-vt fw-semibold">Sắp xếp:</label>
+          <select class="form-select form-select-vt form-select-sm" style="width:auto;">
+            <option>Phổ biến nhất</option>
+            <option>Giá: thấp đến cao</option>
+            <option>Giá: cao đến thấp</option>
+            <option>Đánh giá cao nhất</option>
+            <option>Khởi hành sớm nhất</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Danh sách kết quả (dạng hàng ngang) -->
+      <div class="d-flex flex-column gap-3" id="resultsList">
+
+        <article class="tour-card">
+          <div class="tour-img">
+            <img src="https://picsum.photos/seed/danang1/400/320" alt="Bãi biển Mỹ Khê Đà Nẵng lúc bình minh">
+            <span class="discount-tag">-22%</span>
+          </div>
+          <div class="tour-body">
+            <span class="badge-vt badge-success mb-2 align-self-start"><i class="bi bi-check-circle me-1"></i>Còn 8 chỗ</span>
+            <h5 class="mb-1"><a href="#">Đà Nẵng – Bà Nà Hills – Ngũ Hành Sơn 4N3Đ</a></h5>
+            <p class="text-muted-vt small mb-2"><i class="bi bi-signpost-split me-1"></i>4 ngày 3 đêm · Khởi hành từ TP.HCM · Máy bay</p>
+            <div class="mb-2"><span class="stars">★★★★★</span> <span class="small text-muted-vt">4.9 (312 đánh giá)</span></div>
+            <p class="small text-muted-vt mb-0">Cầu Vàng, làng Pháp, tắm biển Mỹ Khê, thưởng thức hải sản tươi sống mỗi tối.</p>
+          </div>
+          <div class="tour-price-block">
+            <span class="old-price">4.590.000₫</span>
+            <span class="new-price">3.590.000₫</span>
+            <span class="small text-muted-vt mb-2">/ khách</span>
+            <a href="booking.html" class="btn btn-vt-primary btn-sm mt-1">Đặt ngay</a>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <div class="tour-img">
+            <img src="https://picsum.photos/seed/hoian2/400/320" alt="Phố cổ Hội An về đêm với đèn lồng">
+          </div>
+          <div class="tour-body">
+            <span class="badge-vt badge-warning mb-2 align-self-start"><i class="bi bi-exclamation-circle me-1"></i>Còn 3 chỗ</span>
+            <h5 class="mb-1"><a href="#">Đà Nẵng – Hội An – Cù Lao Chàm 5N4Đ</a></h5>
+            <p class="text-muted-vt small mb-2"><i class="bi bi-signpost-split me-1"></i>5 ngày 4 đêm · Khởi hành từ Hà Nội · Máy bay</p>
+            <div class="mb-2"><span class="stars">★★★★★</span> <span class="small text-muted-vt">4.8 (201 đánh giá)</span></div>
+            <p class="small text-muted-vt mb-0">Lặn ngắm san hô Cù Lao Chàm, phố đèn lồng Hội An, làng gốm Thanh Hà.</p>
+          </div>
+          <div class="tour-price-block">
+            <span class="old-price">6.200.000₫</span>
+            <span class="new-price">5.290.000₫</span>
+            <span class="small text-muted-vt mb-2">/ khách</span>
+            <a href="booking.html" class="btn btn-vt-primary btn-sm mt-1">Đặt ngay</a>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <div class="tour-img">
+            <img src="https://picsum.photos/seed/banahill3/400/320" alt="Cầu Vàng Bà Nà Hills trong mây">
+          </div>
+          <div class="tour-body">
+            <span class="badge-vt badge-danger mb-2 align-self-start"><i class="bi bi-x-circle me-1"></i>Hết chỗ</span>
+            <h5 class="mb-1"><a href="#">Khám phá Bà Nà Hills – Chợ Cồn 3N2Đ</a></h5>
+            <p class="text-muted-vt small mb-2"><i class="bi bi-signpost-split me-1"></i>3 ngày 2 đêm · Khởi hành từ TP.HCM · Xe du lịch</p>
+            <div class="mb-2"><span class="stars">★★★★☆</span> <span class="small text-muted-vt">4.3 (98 đánh giá)</span></div>
+            <p class="small text-muted-vt mb-0">Cáp treo dài nhất thế giới, vườn hoa Le Jardin D'Amour, chợ đêm Sơn Trà.</p>
+          </div>
+          <div class="tour-price-block">
+            <span class="old-price">3.100.000₫</span>
+            <span class="new-price">2.590.000₫</span>
+            <span class="small text-muted-vt mb-2">/ khách</span>
+            <button class="btn btn-vt-ghost btn-sm mt-1" disabled>Hết chỗ</button>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <div class="tour-img">
+            <img src="https://picsum.photos/seed/sontra4/400/320" alt="Bán đảo Sơn Trà nhìn từ trên cao">
+          </div>
+          <div class="tour-body">
+            <span class="badge-vt badge-success mb-2 align-self-start"><i class="bi bi-check-circle me-1"></i>Còn 15 chỗ</span>
+            <h5 class="mb-1"><a href="#">Đà Nẵng – Sơn Trà – Linh Ứng Tự 2N1Đ</a></h5>
+            <p class="text-muted-vt small mb-2"><i class="bi bi-signpost-split me-1"></i>2 ngày 1 đêm · Khởi hành từ Đà Nẵng · Xe du lịch</p>
+            <div class="mb-2"><span class="stars">★★★★★</span> <span class="small text-muted-vt">4.7 (145 đánh giá)</span></div>
+            <p class="small text-muted-vt mb-0">Chùa Linh Ứng, ngắm hoàng hôn bán đảo Sơn Trà, tắm biển Bãi Rạng.</p>
+          </div>
+          <div class="tour-price-block">
+            <span class="old-price">1.890.000₫</span>
+            <span class="new-price">1.590.000₫</span>
+            <span class="small text-muted-vt mb-2">/ khách</span>
+            <a href="booking.html" class="btn btn-vt-primary btn-sm mt-1">Đặt ngay</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ============ TRẠNG THÁI KHÔNG TÌM THẤY KẾT QUẢ (demo) ============ -->
+      <div class="empty-state d-none" id="emptyState">
+        <div class="icon-wrap"><i class="bi bi-compass"></i></div>
+        <h5 class="mb-2">Không tìm thấy tour phù hợp</h5>
+        <p class="text-muted-vt mb-3">Không có kết quả nào khớp với từ khóa và bộ lọc hiện tại.<br>Hãy thử điều chỉnh bộ lọc hoặc tìm kiếm với từ khóa khác.</p>
+        <button class="btn btn-vt-primary" onclick="toggleEmptyDemo()">Xoá bộ lọc và thử lại</button>
+      </div>
+
+      <div class="text-center my-3">
+        <button class="btn btn-vt-ghost btn-sm" onclick="toggleEmptyDemo()">Xem thử giao diện “Không tìm thấy kết quả”</button>
+      </div>
+
+      <!-- Phân trang -->
+      <nav class="d-flex justify-content-center mt-4" aria-label="Phân trang kết quả">
+        <ul class="pagination-vt">
+          <li><button disabled><i class="bi bi-chevron-left"></i></button></li>
+          <li><button class="active">1</button></li>
+          <li><button>2</button></li>
+          <li><button>3</button></li>
+          <li><button>4</button></li>
+          <li><button><i class="bi bi-chevron-right"></i></button></li>
+        </ul>
+      </nav>
+
+    </section>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand"><span class="brand-mark">✈</span> VietTrail</div>
+        <p class="small mb-3">VietTrail đồng hành cùng bạn khám phá mọi miền đất nước Việt Nam với những hành trình trọn vẹn và an tâm nhất.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6>Khám phá</h6>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#">Tour trong nước</a></li>
+          <li><a href="#">Tour nước ngoài</a></li>
+          <li><a href="#">Combo khách sạn</a></li>
+          <li><a href="#">Vé máy bay</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6>Hỗ trợ</h6>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Chính sách hủy tour</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h6>Nhận ưu đãi mới nhất</h6>
+        <p class="small">Đăng ký để nhận thông tin tour & ưu đãi hấp dẫn mỗi tuần.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email của bạn">
+          <button class="btn btn-vt-primary" type="submit"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VietTrail. Đã đăng ký bản quyền.</span>
+      <div class="payment-icons">
+        <span>VISA</span><span>MC</span><span>MoMo</span><span>ZaloPay</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  function toggleEmptyDemo(){
+    document.getElementById('resultsList').classList.toggle('d-none');
+    document.getElementById('emptyState').classList.toggle('d-none');
+  }
+</script>
+</body>
+</html>

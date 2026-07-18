@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tài khoản của tôi | VietTrail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="search-results.html" class="brand"><span class="brand-mark">✈</span> Việt<span class="brand-accent">Trail</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="search-results.html">Tìm tour</a>
+      <a href="#">Điểm đến</a>
+      <a href="#">Về chúng tôi</a>
+      <a href="#">Liên hệ</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Tìm kiếm"><i class="bi bi-search"></i></button>
+      <a href="profile.html" class="icon-btn" aria-label="Tài khoản"><i class="bi bi-person-circle"></i></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Mở menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="container py-4">
+  <p class="eyebrow mb-2">Tài khoản</p>
+  <h1 class="section-title mb-4">Xin chào, Nguyễn Thị Mai 👋</h1>
+
+  <div class="row g-4">
+    <!-- ============ SIDEBAR TÀI KHOẢN ============ -->
+    <aside class="col-lg-3">
+      <div class="account-sidebar mb-3">
+        <div class="profile-head">
+          <div class="avatar">NM</div>
+          <strong>Nguyễn Thị Mai</strong>
+          <div class="small" style="opacity:.85;">Thành viên Vàng</div>
+        </div>
+        <ul class="account-nav">
+          <li><a href="#" class="active" data-section="sectionOverview"><i class="bi bi-grid-1x2"></i> Tổng quan</a></li>
+          <li><a href="#" data-section="sectionBookings"><i class="bi bi-suitcase-lg"></i> Tour đã đặt</a></li>
+          <li><a href="#" data-section="sectionInfo"><i class="bi bi-person-lines-fill"></i> Thông tin cá nhân</a></li>
+          <li><a href="#" data-section="sectionWishlist"><i class="bi bi-heart"></i> Yêu thích</a></li>
+          <li><a href="#" data-section="sectionPassword"><i class="bi bi-shield-lock"></i> Đổi mật khẩu</a></li>
+          <li><a href="#" class="logout"><i class="bi bi-box-arrow-right"></i> Đăng xuất</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ============ NỘI DUNG ============ -->
+    <section class="col-lg-9">
+
+      <!-- ========= TỔNG QUAN ========= -->
+      <div id="sectionOverview" class="profile-section">
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <div class="stat-card">
+              <div class="stat-icon" style="background:var(--ocean-light);color:var(--ocean-dark);"><i class="bi bi-suitcase-lg"></i></div>
+              <div><h3>12</h3><p>Tổng số tour đã đặt</p></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-card">
+              <div class="stat-icon" style="background:var(--warning-bg);color:#95650C;"><i class="bi bi-airplane-engines"></i></div>
+              <div><h3>2</h3><p>Tour sắp tới</p></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-card">
+              <div class="stat-icon" style="background:var(--danger-bg);color:var(--danger);"><i class="bi bi-gem"></i></div>
+              <div><h3>3.450</h3><p>Điểm thưởng tích lũy</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-vt p-3 p-md-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="fw-bold mb-0"><i class="bi bi-clock-history text-ocean me-2"></i>Lịch sử đặt tour gần đây</h6>
+            <button class="btn btn-vt-ghost btn-sm" onclick="toggleEmptyDemo()">Xem giao diện trống</button>
+          </div>
+
+          <div class="table-responsive" id="bookingTableWrap">
+            <table class="table-vt">
+              <thead>
+                <tr>
+                  <th>Mã đơn</th>
+                  <th>Tên tour</th>
+                  <th>Ngày khởi hành</th>
+                  <th>Số khách</th>
+                  <th>Tổng tiền</th>
+                  <th>Trạng thái</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#VT260728-118</td>
+                  <td>Đà Nẵng – Hội An – Cù Lao Chàm</td>
+                  <td>28/07/2026</td>
+                  <td>3</td>
+                  <td>13.078.000₫</td>
+                  <td><span class="badge-vt badge-warning">Chờ xác nhận</span></td>
+                  <td><a href="#" class="text-ocean small fw-semibold">Chi tiết</a></td>
+                </tr>
+                <tr>
+                  <td>#VT260610-092</td>
+                  <td>Phú Quốc biển đảo 4N3Đ</td>
+                  <td>10/06/2026</td>
+                  <td>2</td>
+                  <td>8.980.000₫</td>
+                  <td><span class="badge-vt badge-info">Đã thanh toán</span></td>
+                  <td><a href="#" class="text-ocean small fw-semibold">Chi tiết</a></td>
+                </tr>
+                <tr>
+                  <td>#VT260212-045</td>
+                  <td>Sapa – Fansipan – Bản Cát Cát</td>
+                  <td>12/02/2026</td>
+                  <td>4</td>
+                  <td>15.600.000₫</td>
+                  <td><span class="badge-vt badge-success">Đã hoàn thành</span></td>
+                  <td><a href="#" class="text-ocean small fw-semibold">Chi tiết</a></td>
+                </tr>
+                <tr>
+                  <td>#VT251120-011</td>
+                  <td>Nha Trang biển xanh 3N2Đ</td>
+                  <td>20/11/2025</td>
+                  <td>2</td>
+                  <td>5.200.000₫</td>
+                  <td><span class="badge-vt badge-danger">Đã hủy</span></td>
+                  <td><a href="#" class="text-ocean small fw-semibold">Chi tiết</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ========= TRẠNG THÁI CHƯA CÓ ĐƠN (demo) ========= -->
+          <div class="empty-state d-none" id="emptyBookings">
+            <div class="icon-wrap"><i class="bi bi-suitcase"></i></div>
+            <h5 class="mb-2">Bạn chưa có đơn đặt tour nào</h5>
+            <p class="text-muted-vt mb-3">Hãy bắt đầu hành trình khám phá Việt Nam cùng VietTrail ngay hôm nay.</p>
+            <a href="search-results.html" class="btn btn-vt-primary">Khám phá tour ngay</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========= TOUR ĐÃ ĐẶT (chi tiết) ========= -->
+      <div id="sectionBookings" class="profile-section d-none">
+        <div class="card-vt p-3 p-md-4">
+          <h6 class="fw-bold mb-3"><i class="bi bi-suitcase-lg text-ocean me-2"></i>Tất cả tour đã đặt</h6>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-vt badge-warning">Chờ xác nhận · 1</span>
+            <span class="badge-vt badge-info">Đã thanh toán · 1</span>
+            <span class="badge-vt badge-success">Đã hoàn thành · 8</span>
+            <span class="badge-vt badge-danger">Đã hủy · 2</span>
+          </div>
+          <p class="text-muted-vt small">Xem đầy đủ lịch sử tại bảng ở mục Tổng quan, hoặc lọc theo trạng thái để theo dõi đơn hàng của bạn.</p>
+        </div>
+      </div>
+
+      <!-- ========= THÔNG TIN CÁ NHÂN ========= -->
+      <div id="sectionInfo" class="profile-section d-none">
+        <div class="card-vt p-3 p-md-4">
+          <h6 class="fw-bold mb-3"><i class="bi bi-person-lines-fill text-ocean me-2"></i>Cập nhật thông tin cá nhân</h6>
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label-vt">Họ và tên</label>
+              <input type="text" class="form-control form-control-vt" value="Nguyễn Thị Mai">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label-vt">Ngày sinh</label>
+              <input type="date" class="form-control form-control-vt" value="1995-04-12">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label-vt">Số điện thoại</label>
+              <input type="tel" class="form-control form-control-vt" value="0912 345 678">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label-vt">Email</label>
+              <input type="email" class="form-control form-control-vt" value="mai.nguyen@email.com">
+            </div>
+            <div class="col-12">
+              <label class="form-label-vt">Địa chỉ</label>
+              <input type="text" class="form-control form-control-vt" value="12 Lê Lợi, Quận 1, TP. Hồ Chí Minh">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-vt-primary">Lưu thay đổi</button>
+              <button type="reset" class="btn btn-vt-ghost">Hủy</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ========= YÊU THÍCH ========= -->
+      <div id="sectionWishlist" class="profile-section d-none">
+        <div class="card-vt p-3 p-md-4">
+          <h6 class="fw-bold mb-3"><i class="bi bi-heart text-ocean me-2"></i>Tour yêu thích</h6>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="d-flex gap-3 border rounded-3 p-2">
+                <img src="https://picsum.photos/seed/sapa5/120/90" class="rounded-3" style="width:100px;height:75px;object-fit:cover;" alt="Sapa">
+                <div><strong class="d-block small">Sapa – Fansipan mùa lúa chín</strong><span class="new-price small">4.290.000₫</span></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex gap-3 border rounded-3 p-2">
+                <img src="https://picsum.photos/seed/phuquoc6/120/90" class="rounded-3" style="width:100px;height:75px;object-fit:cover;" alt="Phú Quốc">
+                <div><strong class="d-block small">Phú Quốc – Grand World 3N2Đ</strong><span class="new-price small">6.150.000₫</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========= ĐỔI MẬT KHẨU ========= -->
+      <div id="sectionPassword" class="profile-section d-none">
+        <div class="card-vt p-3 p-md-4">
+          <h6 class="fw-bold mb-3"><i class="bi bi-shield-lock text-ocean me-2"></i>Đổi mật khẩu</h6>
+          <form class="row g-3" style="max-width:480px;">
+            <div class="col-12">
+              <label class="form-label-vt">Mật khẩu hiện tại</label>
+              <input type="password" class="form-control form-control-vt" placeholder="••••••••">
+            </div>
+            <div class="col-12">
+              <label class="form-label-vt">Mật khẩu mới</label>
+              <input type="password" class="form-control form-control-vt" placeholder="••••••••">
+            </div>
+            <div class="col-12">
+              <label class="form-label-vt">Xác nhận mật khẩu mới</label>
+              <input type="password" class="form-control form-control-vt" placeholder="••••••••">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-vt-primary">Cập nhật mật khẩu</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand"><span class="brand-mark">✈</span> VietTrail</div>
+        <p class="small mb-3">VietTrail đồng hành cùng bạn khám phá mọi miền đất nước Việt Nam với những hành trình trọn vẹn và an tâm nhất.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6>Khám phá</h6>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#">Tour trong nước</a></li>
+          <li><a href="#">Tour nước ngoài</a></li>
+          <li><a href="#">Combo khách sạn</a></li>
+          <li><a href="#">Vé máy bay</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6>Hỗ trợ</h6>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Chính sách hủy tour</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h6>Nhận ưu đãi mới nhất</h6>
+        <p class="small">Đăng ký để nhận thông tin tour & ưu đãi hấp dẫn mỗi tuần.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email của bạn">
+          <button class="btn btn-vt-primary" type="submit"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VietTrail. Đã đăng ký bản quyền.</span>
+      <div class="payment-icons">
+        <span>VISA</span><span>MC</span><span>MoMo</span><span>ZaloPay</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  document.querySelectorAll('.account-nav a[data-section]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      document.querySelectorAll('.account-nav a').forEach(a=>a.classList.remove('active'));
+      link.classList.add('active');
+      document.querySelectorAll('.profile-section').forEach(s=>s.classList.add('d-none'));
+      document.getElementById(link.dataset.section).classList.remove('d-none');
+    });
+  });
+  function toggleEmptyDemo(){
+    document.getElementById('bookingTableWrap').classList.toggle('d-none');
+    document.getElementById('emptyBookings').classList.toggle('d-none');
+  }
+</script>
+</body>
+</html>

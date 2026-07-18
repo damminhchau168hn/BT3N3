@@ -1,0 +1,429 @@
+/* =========================================================
+   VIETTRAIL — DESIGN SYSTEM
+   Chủ đề: Du lịch Việt Nam — biển, núi, hoàng hôn
+   Font: Be Vietnam Pro (hỗ trợ đầy đủ tiếng Việt)
+   ========================================================= */
+
+:root{
+  /* Màu sắc */
+  --ocean:        #0E7C7B;
+  --ocean-dark:   #0A5A59;
+  --ocean-light:  #E4F3F1;
+  --ink:          #102A2C;
+  --sunset:       #FF7A45;
+  --sunset-dark:  #E5632E;
+  --gold:         #F2A93B;
+  --gold-dark:    #D98C1E;
+  --sand:         #FBF7EE;
+  --sand-deep:    #F2EAD8;
+  --white:        #FFFFFF;
+  --success:      #2E9E6D;
+  --success-bg:   #E7F5EE;
+  --warning:      #F2A93B;
+  --warning-bg:   #FEF3E0;
+  --danger:       #E1554A;
+  --danger-bg:    #FCEAE8;
+  --info-bg:      #E4F3F1;
+  --muted:        #6C8489;
+  --line:         #E4DECB;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 2px 10px rgba(16,42,44,.06);
+  --shadow-md: 0 10px 30px rgba(16,42,44,.10);
+  --shadow-lg: 0 20px 45px rgba(16,42,44,.16);
+}
+
+*{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  font-family:"Be Vietnam Pro", "Segoe UI", sans-serif;
+  color:var(--ink);
+  background:var(--sand);
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:"Be Vietnam Pro", sans-serif;
+  font-weight:800;
+  color:var(--ink);
+  letter-spacing:-.01em;
+}
+
+a{ text-decoration:none; color:inherit; }
+:focus-visible{ outline:3px solid var(--gold); outline-offset:2px; }
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:.4rem;
+  font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ocean);
+}
+.eyebrow::before{ content:""; width:18px; height:2px; background:var(--sunset); display:inline-block; }
+
+.text-ocean{ color:var(--ocean); }
+.text-sunset{ color:var(--sunset); }
+.text-muted-vt{ color:var(--muted); }
+.bg-sand{ background:var(--sand); }
+.bg-sand-deep{ background:var(--sand-deep); }
+
+/* =========================== BUTTONS =========================== */
+.btn-vt-primary{
+  background:var(--sunset); border:1px solid var(--sunset); color:var(--white);
+  font-weight:700; border-radius:999px; padding:.7rem 1.6rem;
+  transition:.2s ease;
+}
+.btn-vt-primary:hover{ background:var(--sunset-dark); border-color:var(--sunset-dark); color:var(--white); transform:translateY(-1px); }
+
+.btn-vt-outline{
+  background:transparent; border:1.5px solid var(--ocean); color:var(--ocean);
+  font-weight:700; border-radius:999px; padding:.65rem 1.5rem;
+  transition:.2s ease;
+}
+.btn-vt-outline:hover{ background:var(--ocean); color:var(--white); }
+
+.btn-vt-ghost{
+  background:var(--white); border:1px solid var(--line); color:var(--ink);
+  font-weight:600; border-radius:999px; padding:.55rem 1.2rem;
+}
+.btn-vt-ghost:hover{ border-color:var(--ocean); color:var(--ocean); }
+
+.btn-vt-dark{
+  background:var(--ink); border:1px solid var(--ink); color:var(--white);
+  font-weight:700; border-radius:999px; padding:.7rem 1.6rem;
+}
+.btn-vt-dark:hover{ background:#08181a; color:var(--white); }
+
+/* =========================== HEADER =========================== */
+.site-header{
+  position:sticky; top:0; z-index:1000;
+  background:rgba(251,247,238,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.85rem 0;
+}
+.brand{
+  display:flex; align-items:center; gap:.5rem;
+  font-size:1.35rem; font-weight:800; color:var(--ink);
+}
+.brand-mark{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:38px; height:38px; border-radius:50%;
+  background:var(--ocean); color:var(--white); font-size:1rem;
+  transform:rotate(45deg);
+}
+.brand-accent{ color:var(--sunset); }
+
+.main-nav{ display:flex; align-items:center; gap:2rem; }
+.main-nav a{
+  font-weight:600; font-size:.95rem; color:var(--ink); position:relative; padding:.3rem 0;
+}
+.main-nav a.active,.main-nav a:hover{ color:var(--ocean); }
+.main-nav a.active::after{
+  content:""; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:var(--sunset); border-radius:2px;
+}
+
+.header-actions{ display:flex; align-items:center; gap:.6rem; }
+.icon-btn{
+  width:42px; height:42px; border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:var(--white); border:1px solid var(--line); color:var(--ink);
+  font-size:1.05rem; transition:.2s;
+}
+.icon-btn:hover{ background:var(--ocean); color:var(--white); border-color:var(--ocean); }
+.nav-toggle{
+  display:none; width:42px; height:42px; border-radius:50%; border:1px solid var(--line);
+  background:var(--white); font-size:1.2rem; align-items:center; justify-content:center;
+}
+
+@media (max-width: 991.98px){
+  .main-nav{
+    position:absolute; top:100%; left:0; right:0; background:var(--white);
+    flex-direction:column; align-items:flex-start; gap:0; padding:.5rem 1.25rem 1rem;
+    box-shadow:var(--shadow-md); display:none; border-bottom:1px solid var(--line);
+  }
+  .main-nav.show{ display:flex; }
+  .main-nav a{ width:100%; padding:.65rem 0; border-bottom:1px dashed var(--line); }
+  .nav-toggle{ display:inline-flex; }
+}
+
+/* Route / flight-path divider — dấu hiệu nhận diện thương hiệu */
+.route-divider{
+  position:relative; height:2px; margin:2.5rem 0;
+  background-image:repeating-linear-gradient(90deg, var(--ocean) 0 10px, transparent 10px 20px);
+  opacity:.5;
+}
+.route-divider::before,.route-divider::after{
+  content:""; position:absolute; top:50%; transform:translateY(-50%);
+  width:9px; height:9px; border-radius:50%; background:var(--sunset);
+}
+.route-divider::before{ left:0; }
+.route-divider::after{ right:0; }
+
+/* =========================== FOOTER =========================== */
+.site-footer{
+  background:var(--ink); color:#CFE3E1; margin-top:4rem;
+  padding-top:3.5rem;
+}
+.site-footer h6{ color:var(--white); font-weight:700; margin-bottom:1.1rem; font-size:.95rem; letter-spacing:.03em; text-transform:uppercase; }
+.site-footer a{ color:#AFC9C6; }
+.site-footer a:hover{ color:var(--gold); }
+.footer-links li{ margin-bottom:.55rem; font-size:.92rem; }
+.footer-brand{ display:flex; align-items:center; gap:.5rem; font-size:1.3rem; font-weight:800; color:var(--white); margin-bottom:.9rem; }
+.footer-social a{
+  width:36px; height:36px; border-radius:50%; border:1px solid #2A4C4B;
+  display:inline-flex; align-items:center; justify-content:center; margin-right:.5rem;
+}
+.footer-social a:hover{ background:var(--sunset); border-color:var(--sunset); color:var(--white); }
+.newsletter-form{ display:flex; gap:.5rem; }
+.newsletter-form input{
+  border-radius:999px; border:1px solid #2A4C4B; background:#0C2224; color:var(--white); padding:.55rem 1rem; flex:1; font-size:.88rem;
+}
+.newsletter-form input::placeholder{ color:#7FA09D; }
+.footer-bottom{
+  border-top:1px solid #1E3B3A; margin-top:2.5rem; padding:1.1rem 0;
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.75rem;
+  font-size:.85rem; color:#84A6A3;
+}
+.payment-icons span{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:38px; height:26px; background:#12302F; border-radius:5px; margin-left:.4rem; font-size:.7rem; color:#CFE3E1;
+}
+
+/* =========================== CHIPS / TAGS =========================== */
+.chip{
+  display:inline-flex; align-items:center; gap:.4rem;
+  background:var(--ocean-light); color:var(--ocean-dark); font-weight:600; font-size:.82rem;
+  padding:.35rem .75rem; border-radius:999px; border:1px solid #CDE7E4;
+}
+.chip button{
+  background:none; border:none; color:var(--ocean-dark); font-size:1rem; line-height:1; padding:0; display:flex;
+}
+.chip button:hover{ color:var(--danger); }
+
+.badge-vt{ font-weight:700; font-size:.72rem; padding:.4em .7em; border-radius:999px; letter-spacing:.02em; }
+.badge-success{ background:var(--success-bg); color:var(--success); }
+.badge-warning{ background:var(--warning-bg); color:#95650C; }
+.badge-danger{ background:var(--danger-bg); color:var(--danger); }
+.badge-info{ background:var(--info-bg); color:var(--ocean-dark); }
+.badge-muted{ background:#EEE9DA; color:var(--muted); }
+
+/* =========================== CARDS CHUNG =========================== */
+.section-title{ font-size:1.7rem; margin-bottom:.25rem; }
+.card-vt{
+  background:var(--white); border-radius:var(--radius-md); border:1px solid var(--line);
+  box-shadow:var(--shadow-sm);
+}
+
+/* rating stars */
+.stars{ color:var(--gold); font-size:.85rem; letter-spacing:1px; }
+
+/* =========================== PAGINATION =========================== */
+.pagination-vt{ display:flex; align-items:center; gap:.4rem; list-style:none; padding:0; margin:0; }
+.pagination-vt button{
+  width:40px; height:40px; border-radius:50%; border:1px solid var(--line); background:var(--white);
+  font-weight:600; color:var(--ink);
+}
+.pagination-vt button.active{ background:var(--ocean); border-color:var(--ocean); color:var(--white); }
+.pagination-vt button:hover:not(.active):not(:disabled){ border-color:var(--ocean); color:var(--ocean); }
+.pagination-vt button:disabled{ opacity:.4; }
+
+/* =========================== EMPTY STATE =========================== */
+.empty-state{
+  text-align:center; padding:4rem 1.5rem; background:var(--white); border:1px dashed var(--line); border-radius:var(--radius-lg);
+}
+.empty-state .icon-wrap{
+  width:88px; height:88px; border-radius:50%; background:var(--sand-deep); color:var(--ocean);
+  display:flex; align-items:center; justify-content:center; font-size:2.2rem; margin:0 auto 1.2rem;
+}
+
+/* =========================== STEP INDICATOR (booking) ================= */
+.steps-bar{ display:flex; align-items:flex-start; justify-content:space-between; margin:1rem 0 2.5rem; position:relative; }
+.step-item{ flex:1; text-align:center; position:relative; }
+.step-item .step-circle{
+  width:42px; height:42px; border-radius:50%; background:var(--white); border:2px solid var(--line);
+  display:flex; align-items:center; justify-content:center; margin:0 auto .55rem; font-weight:700; color:var(--muted);
+  position:relative; z-index:2;
+}
+.step-item .step-label{ font-size:.85rem; font-weight:600; color:var(--muted); }
+.step-item::before{
+  content:""; position:absolute; top:21px; left:-50%; width:100%; height:2px;
+  background-image:repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 16px); z-index:1;
+}
+.step-item:first-child::before{ display:none; }
+.step-item.done .step-circle{ background:var(--ocean); border-color:var(--ocean); color:var(--white); }
+.step-item.done .step-label{ color:var(--ocean); }
+.step-item.done::before{ background-image:repeating-linear-gradient(90deg, var(--ocean) 0 8px, transparent 8px 16px); }
+.step-item.active .step-circle{ background:var(--sunset); border-color:var(--sunset); color:var(--white); box-shadow:0 0 0 5px #FFE3D5; }
+.step-item.active .step-label{ color:var(--sunset); font-weight:700; }
+
+/* =========================== FORMS =========================== */
+.form-label-vt{ font-weight:600; font-size:.88rem; margin-bottom:.35rem; color:var(--ink); }
+.form-control-vt, .form-select-vt{
+  border:1.5px solid var(--line); border-radius:var(--radius-sm); padding:.65rem .9rem; font-size:.92rem; background:var(--white);
+}
+.form-control-vt:focus, .form-select-vt:focus{
+  border-color:var(--ocean); box-shadow:0 0 0 3px var(--ocean-light); outline:none;
+}
+.qty-stepper{ display:flex; align-items:center; border:1.5px solid var(--line); border-radius:999px; overflow:hidden; width:fit-content; }
+.qty-stepper button{ width:38px; height:38px; border:none; background:var(--sand-deep); font-size:1.1rem; font-weight:700; color:var(--ocean-dark); }
+.qty-stepper button:hover{ background:var(--ocean); color:var(--white); }
+.qty-stepper span{ width:42px; text-align:center; font-weight:700; }
+
+.upsell-card{
+  border:1.5px solid var(--line); border-radius:var(--radius-md); padding:1rem 1.1rem; cursor:pointer; transition:.15s; background:var(--white);
+}
+.upsell-card:hover{ border-color:var(--ocean); }
+.upsell-card input:checked ~ .upsell-body,.upsell-card.checked{ border-color:var(--ocean); background:var(--ocean-light); }
+
+/* Sidebar summary (booking/checkout) */
+.summary-box{
+  background:var(--white); border-radius:var(--radius-lg); border:1px solid var(--line); box-shadow:var(--shadow-md);
+  padding:1.5rem; position:sticky; top:100px;
+}
+.summary-box .line{ display:flex; justify-content:space-between; font-size:.9rem; padding:.5rem 0; color:var(--muted); }
+.summary-box .line strong{ color:var(--ink); font-weight:600; }
+.summary-box .total-row{ display:flex; justify-content:space-between; align-items:center; padding-top:1rem; margin-top:.5rem; border-top:1.5px dashed var(--line); }
+
+/* Payment methods */
+.pay-method{
+  border:1.5px solid var(--line); border-radius:var(--radius-md); padding:1rem 1.1rem; display:flex; align-items:center; gap:.85rem; cursor:pointer; background:var(--white);
+}
+.pay-method:hover{ border-color:var(--ocean); }
+.pay-method input:checked ~ * , .pay-method.selected{ }
+.pay-method.selected{ border-color:var(--ocean); background:var(--ocean-light); }
+.pay-method .pay-icon{ width:46px; height:46px; border-radius:12px; background:var(--sand-deep); display:flex; align-items:center; justify-content:center; font-size:1.3rem; color:var(--ocean-dark); flex:none; }
+
+.security-note{
+  background:var(--info-bg); border:1px solid #CDE7E4; border-radius:var(--radius-md); padding:1rem 1.2rem; display:flex; gap:.85rem; align-items:flex-start;
+}
+.security-note i{ color:var(--ocean); font-size:1.3rem; }
+
+/* =========================== PROFILE =========================== */
+.account-sidebar{ background:var(--white); border-radius:var(--radius-lg); border:1px solid var(--line); box-shadow:var(--shadow-sm); overflow:hidden; }
+.account-sidebar .profile-head{ background:linear-gradient(135deg,var(--ocean),var(--ocean-dark)); color:var(--white); padding:1.6rem 1.3rem; text-align:center; }
+.account-sidebar .avatar{ width:74px; height:74px; border-radius:50%; background:var(--white); color:var(--ocean); font-weight:800; font-size:1.6rem; display:flex; align-items:center; justify-content:center; margin:0 auto .7rem; border:3px solid #ffffff55; }
+.account-nav{ list-style:none; margin:0; padding:.6rem; }
+.account-nav a{ display:flex; align-items:center; gap:.7rem; padding:.7rem .85rem; border-radius:var(--radius-sm); font-weight:600; font-size:.92rem; color:var(--ink); }
+.account-nav a i{ font-size:1.05rem; color:var(--muted); width:20px; }
+.account-nav a:hover{ background:var(--sand-deep); }
+.account-nav a.active{ background:var(--ocean); color:var(--white); }
+.account-nav a.active i{ color:var(--white); }
+.account-nav .logout{ color:var(--danger); }
+.account-nav .logout i{ color:var(--danger); }
+
+.stat-card{ background:var(--white); border-radius:var(--radius-md); border:1px solid var(--line); padding:1.3rem; display:flex; align-items:center; gap:1rem; box-shadow:var(--shadow-sm); }
+.stat-card .stat-icon{ width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex:none; }
+.stat-card h3{ font-size:1.6rem; margin:0; }
+.stat-card p{ margin:0; font-size:.83rem; color:var(--muted); font-weight:600; }
+
+.table-vt{ width:100%; border-collapse:separate; border-spacing:0; }
+.table-vt thead th{ font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:700; border-bottom:1px solid var(--line); padding:.85rem 1rem; background:var(--sand-deep); }
+.table-vt thead th:first-child{ border-top-left-radius:12px; }
+.table-vt thead th:last-child{ border-top-right-radius:12px; }
+.table-vt tbody td{ padding:.95rem 1rem; border-bottom:1px solid var(--line); font-size:.9rem; vertical-align:middle; }
+.table-vt tbody tr:hover{ background:var(--sand); }
+
+/* =========================== ADMIN =========================== */
+.admin-shell{ display:flex; min-height:100vh; background:var(--sand); }
+.admin-sidebar{
+  width:260px; flex:none; background:var(--ink); color:#CFE3E1; padding:1.3rem 1rem; position:sticky; top:0; height:100vh; overflow-y:auto; transition:.25s ease; z-index:900;
+}
+.admin-sidebar .brand{ color:var(--white); padding:.4rem .5rem 1.3rem; }
+.admin-nav{ list-style:none; padding:0; margin:0; }
+.admin-nav .nav-heading{ font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:#5F8B87; margin:1.1rem .6rem .5rem; font-weight:700; }
+.admin-nav a{ display:flex; align-items:center; gap:.75rem; padding:.7rem .8rem; border-radius:10px; font-weight:600; font-size:.9rem; color:#B9D6D3; margin-bottom:.15rem; }
+.admin-nav a i{ font-size:1.1rem; width:20px; text-align:center; }
+.admin-nav a:hover{ background:#173838; color:var(--white); }
+.admin-nav a.active{ background:var(--sunset); color:var(--white); }
+.admin-main{ flex:1; min-width:0; }
+.admin-topbar{
+  position:sticky; top:0; z-index:800; background:var(--white); border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.85rem 1.5rem;
+}
+.admin-search{ position:relative; max-width:340px; flex:1; }
+.admin-search input{ width:100%; border-radius:999px; border:1.5px solid var(--line); padding:.6rem 1rem .6rem 2.4rem; font-size:.88rem; background:var(--sand); }
+.admin-search i{ position:absolute; left:.9rem; top:50%; transform:translateY(-50%); color:var(--muted); }
+.sidebar-toggle-btn{ display:none; }
+
+.kpi-card{ background:var(--white); border-radius:var(--radius-md); border:1px solid var(--line); padding:1.25rem; box-shadow:var(--shadow-sm); }
+.kpi-card .kpi-top{ display:flex; justify-content:space-between; align-items:flex-start; }
+.kpi-card .kpi-icon{ width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.15rem; }
+.kpi-card h3{ font-size:1.55rem; margin:.6rem 0 0; }
+.kpi-card .kpi-trend{ font-size:.78rem; font-weight:700; }
+
+/* CSS bar chart mô phỏng doanh thu */
+.bar-chart{ display:flex; align-items:flex-end; gap:.85rem; height:210px; padding-top:1rem; }
+.bar-chart .bar-col{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%; }
+.bar-chart .bar{ width:100%; max-width:34px; border-radius:8px 8px 3px 3px; background:linear-gradient(180deg,var(--gold),var(--sunset)); position:relative; transition:height .6s ease; }
+.bar-chart .bar-col:nth-child(6) .bar, .bar-chart .bar-col.is-peak .bar{ background:linear-gradient(180deg,var(--ocean),var(--ocean-dark)); }
+.bar-chart .bar-label{ font-size:.72rem; color:var(--muted); margin-top:.5rem; font-weight:600; }
+
+/* Donut chart mô phỏng tỷ lệ khu vực */
+.donut{
+  width:150px; height:150px; border-radius:50%; margin:0 auto;
+  background:conic-gradient(var(--ocean) 0 34%, var(--sunset) 34% 58%, var(--gold) 58% 79%, #C9BE9B 79% 100%);
+  display:flex; align-items:center; justify-content:center; position:relative;
+}
+.donut::after{ content:""; width:88px; height:88px; border-radius:50%; background:var(--white); position:absolute; }
+.donut-center{ position:relative; z-index:2; text-align:center; }
+.donut-center strong{ font-size:1.1rem; display:block; }
+.donut-center span{ font-size:.7rem; color:var(--muted); }
+.legend-dot{ width:10px; height:10px; border-radius:50%; display:inline-block; margin-right:.5rem; }
+
+/* Responsive admin sidebar */
+@media (max-width: 991.98px){
+  .admin-sidebar{ position:fixed; left:0; top:0; transform:translateX(-100%); box-shadow:var(--shadow-lg); }
+  .admin-sidebar.show{ transform:translateX(0); }
+  .sidebar-toggle-btn{ display:inline-flex; }
+  .admin-backdrop{ display:none; position:fixed; inset:0; background:rgba(16,42,44,.45); z-index:850; }
+  .admin-backdrop.show{ display:block; }
+}
+@media (min-width: 992.98px){
+  .admin-shell.collapsed .admin-sidebar{ width:78px; }
+  .admin-shell.collapsed .admin-sidebar .label-text,
+  .admin-shell.collapsed .admin-sidebar .nav-heading,
+  .admin-shell.collapsed .admin-sidebar .brand-text{ display:none; }
+  .admin-shell.collapsed .admin-nav a{ justify-content:center; }
+}
+
+/* =========================== TOUR CARD (kết quả tìm kiếm) =========================== */
+.tour-card{
+  display:flex; gap:0; background:var(--white); border:1px solid var(--line); border-radius:var(--radius-lg);
+  overflow:hidden; box-shadow:var(--shadow-sm); transition:.2s ease;
+}
+.tour-card:hover{ box-shadow:var(--shadow-md); transform:translateY(-2px); }
+.tour-card .tour-img{ width:280px; flex:none; position:relative; overflow:hidden; }
+.tour-card .tour-img img{ width:100%; height:100%; object-fit:cover; }
+.tour-card .tour-img .discount-tag{
+  position:absolute; top:12px; left:12px; background:var(--sunset); color:var(--white); font-weight:700; font-size:.75rem;
+  padding:.3rem .65rem; border-radius:999px;
+}
+.tour-card .tour-body{ padding:1.1rem 1.3rem; flex:1; display:flex; flex-direction:column; }
+.tour-card .tour-price-block{ width:210px; flex:none; border-left:1px dashed var(--line); padding:1.1rem 1.2rem; display:flex; flex-direction:column; justify-content:center; align-items:flex-end; text-align:right; }
+.old-price{ text-decoration:line-through; color:var(--muted); font-size:.85rem; }
+.new-price{ font-size:1.35rem; font-weight:800; color:var(--sunset-dark); }
+
+@media (max-width: 767.98px){
+  .tour-card{ flex-direction:column; }
+  .tour-card .tour-img{ width:100%; height:190px; }
+  .tour-card .tour-price-block{ width:100%; border-left:none; border-top:1px dashed var(--line); align-items:flex-start; text-align:left; flex-direction:row; justify-content:space-between; }
+}
+
+/* Filter sidebar */
+.filter-box{ background:var(--white); border:1px solid var(--line); border-radius:var(--radius-md); padding:1.2rem; }
+.filter-box + .filter-box{ margin-top:1rem; }
+.filter-box .filter-title{ font-weight:700; font-size:.92rem; margin-bottom:.85rem; display:flex; align-items:center; justify-content:space-between; }
+
+.hero-banner{
+  background:linear-gradient(120deg, var(--ocean-dark), var(--ocean) 60%, #12938F);
+  color:var(--white); border-radius:var(--radius-lg); padding:2.2rem 2rem; position:relative; overflow:hidden;
+}
+.hero-banner::after{
+  content:"✈"; position:absolute; right:2rem; top:1.5rem; font-size:4rem; opacity:.15; transform:rotate(45deg);
+}

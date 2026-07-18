@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đặt tour | VietTrail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="./style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="search-results.html" class="brand"><span class="brand-mark">✈</span> Việt<span class="brand-accent">Trail</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="search-results.html">Tìm tour</a>
+      <a href="#">Điểm đến</a>
+      <a href="#">Về chúng tôi</a>
+      <a href="#">Liên hệ</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Tìm kiếm"><i class="bi bi-search"></i></button>
+      <a href="profile.html" class="icon-btn" aria-label="Tài khoản"><i class="bi bi-person-circle"></i></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Mở menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="container py-4">
+
+  <p class="eyebrow mb-2">Đặt tour</p>
+  <h1 class="section-title mb-4">Hoàn tất thông tin đặt tour</h1>
+
+  <!-- ============ THANH BƯỚC ============ -->
+  <div class="steps-bar">
+    <div class="step-item done">
+      <div class="step-circle"><i class="bi bi-check-lg"></i></div>
+      <div class="step-label">Chọn tour</div>
+    </div>
+    <div class="step-item active">
+      <div class="step-circle">2</div>
+      <div class="step-label">Thông tin khách hàng</div>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">3</div>
+      <div class="step-label">Thanh toán</div>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">4</div>
+      <div class="step-label">Hoàn tất</div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-8">
+
+      <!-- ============ TOUR ĐÃ CHỌN ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <div class="d-flex flex-wrap gap-3">
+          <img src="https://picsum.photos/seed/hoian2/220/150" class="rounded-3" style="width:150px;height:110px;object-fit:cover;" alt="Tour Hội An đã chọn">
+          <div class="flex-grow-1">
+            <span class="badge-vt badge-info mb-1">Mã tour: VT-HA054</span>
+            <h5 class="mb-1">Đà Nẵng – Hội An – Cù Lao Chàm 5N4Đ</h5>
+            <p class="small text-muted-vt mb-0"><i class="bi bi-airplane me-1"></i>Khởi hành từ Hà Nội &nbsp;·&nbsp; <i class="bi bi-people me-1"></i>Tối đa 20 khách/đoàn</p>
+          </div>
+          <div class="text-end">
+            <span class="new-price d-block">5.290.000₫</span>
+            <span class="small text-muted-vt">/ khách người lớn</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ NGÀY KHỞI HÀNH ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <h6 class="fw-bold mb-3"><i class="bi bi-calendar-event text-ocean me-2"></i>Chọn ngày khởi hành</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <input type="radio" class="btn-check" name="depDate" id="date1" checked>
+          <label class="btn btn-vt-ghost" for="date1">28/07/2026 <br><small class="text-muted-vt">Còn 12 chỗ</small></label>
+
+          <input type="radio" class="btn-check" name="depDate" id="date2">
+          <label class="btn btn-vt-ghost" for="date2">04/08/2026 <br><small class="text-muted-vt">Còn 20 chỗ</small></label>
+
+          <input type="radio" class="btn-check" name="depDate" id="date3">
+          <label class="btn btn-vt-ghost" for="date3">11/08/2026 <br><small class="text-muted-vt">Còn 5 chỗ</small></label>
+        </div>
+      </div>
+
+      <!-- ============ SỐ LƯỢNG KHÁCH ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <h6 class="fw-bold mb-3"><i class="bi bi-people text-ocean me-2"></i>Số lượng hành khách</h6>
+        <div class="row g-3">
+          <div class="col-sm-6 d-flex justify-content-between align-items-center border rounded-3 p-3">
+            <div>
+              <div class="fw-semibold">Người lớn</div>
+              <div class="small text-muted-vt">Từ 12 tuổi trở lên</div>
+            </div>
+            <div class="qty-stepper" data-min="1" data-max="10" data-value="2">
+              <button type="button" class="qty-minus">−</button>
+              <span class="qty-value">2</span>
+              <button type="button" class="qty-plus">+</button>
+            </div>
+          </div>
+          <div class="col-sm-6 d-flex justify-content-between align-items-center border rounded-3 p-3">
+            <div>
+              <div class="fw-semibold">Trẻ em</div>
+              <div class="small text-muted-vt">Từ 2 – 11 tuổi</div>
+            </div>
+            <div class="qty-stepper" data-min="0" data-max="10" data-value="1">
+              <button type="button" class="qty-minus">−</button>
+              <span class="qty-value">1</span>
+              <button type="button" class="qty-plus">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ FORM THÔNG TIN NGƯỜI ĐẶT ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <h6 class="fw-bold mb-3"><i class="bi bi-person-badge text-ocean me-2"></i>Thông tin người đặt</h6>
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label-vt">Họ và tên <span class="text-sunset">*</span></label>
+            <input type="text" class="form-control form-control-vt" placeholder="Nguyễn Văn A" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label-vt">Số điện thoại <span class="text-sunset">*</span></label>
+            <input type="tel" class="form-control form-control-vt" placeholder="09xx xxx xxx" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label-vt">Email <span class="text-sunset">*</span></label>
+            <input type="email" class="form-control form-control-vt" placeholder="email@vidu.com" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label-vt">Địa chỉ</label>
+            <input type="text" class="form-control form-control-vt" placeholder="Số nhà, đường, quận/huyện">
+          </div>
+        </form>
+      </div>
+
+      <!-- ============ DANH SÁCH HÀNH KHÁCH ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h6 class="fw-bold mb-0"><i class="bi bi-list-check text-ocean me-2"></i>Danh sách hành khách</h6>
+          <button type="button" class="btn btn-vt-ghost btn-sm"><i class="bi bi-plus-lg me-1"></i>Thêm hành khách</button>
+        </div>
+
+        <div class="border rounded-3 p-3 mb-3">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="badge-vt badge-info">Hành khách 1 · Người lớn</span>
+            <button type="button" class="btn btn-sm text-danger"><i class="bi bi-trash"></i></button>
+          </div>
+          <div class="row g-2">
+            <div class="col-md-4"><input type="text" class="form-control form-control-vt" placeholder="Họ và tên"></div>
+            <div class="col-md-3"><input type="date" class="form-control form-control-vt"></div>
+            <div class="col-md-2">
+              <select class="form-select form-select-vt"><option>Nam</option><option>Nữ</option></select>
+            </div>
+            <div class="col-md-3"><input type="text" class="form-control form-control-vt" placeholder="Số CMND/CCCD"></div>
+          </div>
+        </div>
+
+        <div class="border rounded-3 p-3">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="badge-vt badge-info">Hành khách 2 · Người lớn</span>
+            <button type="button" class="btn btn-sm text-danger"><i class="bi bi-trash"></i></button>
+          </div>
+          <div class="row g-2">
+            <div class="col-md-4"><input type="text" class="form-control form-control-vt" placeholder="Họ và tên"></div>
+            <div class="col-md-3"><input type="date" class="form-control form-control-vt"></div>
+            <div class="col-md-2">
+              <select class="form-select form-select-vt"><option>Nam</option><option>Nữ</option></select>
+            </div>
+            <div class="col-md-3"><input type="text" class="form-control form-control-vt" placeholder="Số CMND/CCCD"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ DỊCH VỤ BỔ SUNG ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <h6 class="fw-bold mb-3"><i class="bi bi-stars text-ocean me-2"></i>Dịch vụ bổ sung</h6>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="upsell-card d-block mb-0">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <input type="checkbox" class="form-check-input me-2" checked>
+                  <strong>Bảo hiểm du lịch</strong>
+                  <p class="small text-muted-vt mb-0 mt-1">Bảo vệ toàn diện trong suốt chuyến đi</p>
+                </div>
+              </div>
+              <div class="text-sunset fw-bold mt-2">+99.000₫/khách</div>
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label class="upsell-card d-block mb-0">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <input type="checkbox" class="form-check-input me-2">
+                  <strong>Nâng hạng phòng</strong>
+                  <p class="small text-muted-vt mb-0 mt-1">Phòng view biển, hạng Deluxe</p>
+                </div>
+              </div>
+              <div class="text-sunset fw-bold mt-2">+350.000₫/phòng</div>
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label class="upsell-card d-block mb-0">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <input type="checkbox" class="form-check-input me-2">
+                  <strong>Hành lý ký gửi thêm</strong>
+                  <p class="small text-muted-vt mb-0 mt-1">Thêm 10kg hành lý ký gửi</p>
+                </div>
+              </div>
+              <div class="text-sunset fw-bold mt-2">+150.000₫/khách</div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ GHI CHÚ ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <h6 class="fw-bold mb-3"><i class="bi bi-pencil-square text-ocean me-2"></i>Ghi chú</h6>
+        <textarea class="form-control form-control-vt" rows="3" placeholder="Yêu cầu đặc biệt: ăn chay, phòng gần nhau, hỗ trợ người cao tuổi..."></textarea>
+      </div>
+
+    </div>
+
+    <!-- ============ SIDEBAR TỔNG CHI PHÍ ============ -->
+    <div class="col-lg-4">
+      <div class="summary-box">
+        <h6 class="fw-bold mb-3">Tóm tắt chi phí</h6>
+        <div class="line"><span>Người lớn x2</span><strong>10.580.000₫</strong></div>
+        <div class="line"><span>Trẻ em x1</span><strong>2.650.000₫</strong></div>
+        <div class="line"><span>Bảo hiểm du lịch x2</span><strong>198.000₫</strong></div>
+        <div class="line"><span>Thuế & phí dịch vụ</span><strong>150.000₫</strong></div>
+        <div class="line text-sunset"><span>Mã ưu đãi SUMMER26</span><strong>-500.000₫</strong></div>
+        <div class="total-row">
+          <span class="fw-semibold">Tổng cộng</span>
+          <span class="new-price">13.078.000₫</span>
+        </div>
+        <a href="checkout.html" class="btn btn-vt-primary w-100 mt-3">Tiếp tục thanh toán <i class="bi bi-arrow-right ms-1"></i></a>
+        <p class="small text-muted-vt mt-3 mb-0"><i class="bi bi-shield-check text-ocean me-1"></i>Thông tin của bạn được bảo mật an toàn.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand"><span class="brand-mark">✈</span> VietTrail</div>
+        <p class="small mb-3">VietTrail đồng hành cùng bạn khám phá mọi miền đất nước Việt Nam với những hành trình trọn vẹn và an tâm nhất.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6>Khám phá</h6>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#">Tour trong nước</a></li>
+          <li><a href="#">Tour nước ngoài</a></li>
+          <li><a href="#">Combo khách sạn</a></li>
+          <li><a href="#">Vé máy bay</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6>Hỗ trợ</h6>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Chính sách hủy tour</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h6>Nhận ưu đãi mới nhất</h6>
+        <p class="small">Đăng ký để nhận thông tin tour & ưu đãi hấp dẫn mỗi tuần.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email của bạn">
+          <button class="btn btn-vt-primary" type="submit"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VietTrail. Đã đăng ký bản quyền.</span>
+      <div class="payment-icons">
+        <span>VISA</span><span>MC</span><span>MoMo</span><span>ZaloPay</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

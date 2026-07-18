@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanh toán | VietTrail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="search-results.html" class="brand"><span class="brand-mark">✈</span> Việt<span class="brand-accent">Trail</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="search-results.html">Tìm tour</a>
+      <a href="#">Điểm đến</a>
+      <a href="#">Về chúng tôi</a>
+      <a href="#">Liên hệ</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Tìm kiếm"><i class="bi bi-search"></i></button>
+      <a href="profile.html" class="icon-btn" aria-label="Tài khoản"><i class="bi bi-person-circle"></i></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Mở menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="container py-4">
+
+  <p class="eyebrow mb-2">Bước cuối cùng</p>
+  <h1 class="section-title mb-4">Thanh toán & xác nhận đơn hàng</h1>
+
+  <!-- ============ THANH BƯỚC ============ -->
+  <div class="steps-bar">
+    <div class="step-item done">
+      <div class="step-circle"><i class="bi bi-check-lg"></i></div>
+      <div class="step-label">Chọn tour</div>
+    </div>
+    <div class="step-item done">
+      <div class="step-circle"><i class="bi bi-check-lg"></i></div>
+      <div class="step-label">Thông tin khách hàng</div>
+    </div>
+    <div class="step-item active">
+      <div class="step-circle">3</div>
+      <div class="step-label">Thanh toán</div>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">4</div>
+      <div class="step-label">Hoàn tất</div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-8">
+
+      <!-- ============ THÔNG TIN ĐƠN ĐẶT TOUR ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <h6 class="fw-bold mb-3"><i class="bi bi-map text-ocean me-2"></i>Thông tin đơn đặt tour</h6>
+        <div class="d-flex flex-wrap gap-3">
+          <img src="https://picsum.photos/seed/hoian2/220/150" class="rounded-3" style="width:150px;height:110px;object-fit:cover;" alt="Tour đã chọn">
+          <div class="flex-grow-1">
+            <h5 class="mb-1">Đà Nẵng – Hội An – Cù Lao Chàm 5N4Đ</h5>
+            <p class="small text-muted-vt mb-1"><i class="bi bi-calendar-event me-1"></i>Khởi hành: <strong>28/07/2026</strong> · 5 ngày 4 đêm</p>
+            <p class="small text-muted-vt mb-0"><i class="bi bi-geo-alt me-1"></i>Điểm khởi hành: Hà Nội &nbsp; · &nbsp; Mã đơn: <strong>#VT260728-118</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ THÔNG TIN KHÁCH HÀNG ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <h6 class="fw-bold mb-3"><i class="bi bi-person-badge text-ocean me-2"></i>Thông tin khách hàng</h6>
+        <div class="row g-3 small">
+          <div class="col-sm-6"><span class="text-muted-vt d-block">Họ và tên</span><strong>Nguyễn Thị Mai</strong></div>
+          <div class="col-sm-6"><span class="text-muted-vt d-block">Số điện thoại</span><strong>0912 345 678</strong></div>
+          <div class="col-sm-6"><span class="text-muted-vt d-block">Email</span><strong>mai.nguyen@email.com</strong></div>
+          <div class="col-sm-6"><span class="text-muted-vt d-block">Địa chỉ</span><strong>12 Lê Lợi, Q.1, TP.HCM</strong></div>
+        </div>
+      </div>
+
+      <!-- ============ TÓM TẮT HÀNH KHÁCH ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <h6 class="fw-bold mb-3"><i class="bi bi-people text-ocean me-2"></i>Tóm tắt hành khách</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge-vt badge-info">2 Người lớn</span>
+          <span class="badge-vt badge-info">1 Trẻ em</span>
+          <span class="badge-vt badge-muted">Bảo hiểm du lịch: Có</span>
+        </div>
+      </div>
+
+      <!-- ============ MÃ GIẢM GIÁ ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <h6 class="fw-bold mb-3"><i class="bi bi-tag text-ocean me-2"></i>Mã giảm giá</h6>
+        <div class="d-flex gap-2">
+          <input type="text" class="form-control form-control-vt" placeholder="Nhập mã giảm giá" value="SUMMER26">
+          <button class="btn btn-vt-outline flex-shrink-0">Áp dụng</button>
+        </div>
+        <p class="small text-success mt-2 mb-0"><i class="bi bi-check-circle-fill me-1"></i>Đã áp dụng mã "SUMMER26" — giảm 500.000₫</p>
+      </div>
+
+      <!-- ============ PHƯƠNG THỨC THANH TOÁN ============ -->
+      <div class="card-vt p-3 p-md-4 mb-4">
+        <h6 class="fw-bold mb-3"><i class="bi bi-credit-card text-ocean me-2"></i>Phương thức thanh toán</h6>
+
+        <div class="d-flex flex-column gap-2" id="payMethods">
+          <label class="pay-method selected" data-target="panelBank">
+            <input type="radio" name="payMethod" class="form-check-input d-none" checked>
+            <span class="pay-icon"><i class="bi bi-bank"></i></span>
+            <span class="flex-grow-1">
+              <strong class="d-block">Chuyển khoản ngân hàng</strong>
+              <span class="small text-muted-vt">Chuyển khoản qua Internet Banking / QR</span>
+            </span>
+            <i class="bi bi-check-circle-fill text-ocean fs-5"></i>
+          </label>
+
+          <label class="pay-method" data-target="panelWallet">
+            <input type="radio" name="payMethod" class="form-check-input d-none">
+            <span class="pay-icon"><i class="bi bi-wallet2"></i></span>
+            <span class="flex-grow-1">
+              <strong class="d-block">Ví điện tử</strong>
+              <span class="small text-muted-vt">MoMo, ZaloPay, VNPay</span>
+            </span>
+          </label>
+
+          <label class="pay-method" data-target="panelCard">
+            <input type="radio" name="payMethod" class="form-check-input d-none">
+            <span class="pay-icon"><i class="bi bi-credit-card-2-front"></i></span>
+            <span class="flex-grow-1">
+              <strong class="d-block">Thẻ ngân hàng</strong>
+              <span class="small text-muted-vt">Visa, Mastercard, JCB</span>
+            </span>
+          </label>
+
+          <label class="pay-method" data-target="panelOffice">
+            <input type="radio" name="payMethod" class="form-check-input d-none">
+            <span class="pay-icon"><i class="bi bi-shop"></i></span>
+            <span class="flex-grow-1">
+              <strong class="d-block">Thanh toán tại văn phòng</strong>
+              <span class="small text-muted-vt">Giữ chỗ trước, thanh toán trực tiếp</span>
+            </span>
+          </label>
+        </div>
+
+        <!-- Panel chi tiết theo phương thức -->
+        <div class="mt-3">
+          <div class="pay-panel" id="panelBank">
+            <div class="border rounded-3 p-3 bg-sand-deep small">
+              <p class="mb-1">Ngân hàng: <strong>Vietcombank – CN Hồ Chí Minh</strong></p>
+              <p class="mb-1">Số tài khoản: <strong>0071000123456</strong></p>
+              <p class="mb-1">Chủ tài khoản: <strong>CÔNG TY TNHH VIETTRAIL</strong></p>
+              <p class="mb-0">Nội dung CK: <strong>VT260728-118 Nguyen Thi Mai</strong></p>
+            </div>
+          </div>
+          <div class="pay-panel d-none" id="panelWallet">
+            <div class="d-flex flex-wrap gap-2">
+              <button type="button" class="btn btn-vt-ghost btn-sm">MoMo</button>
+              <button type="button" class="btn btn-vt-ghost btn-sm">ZaloPay</button>
+              <button type="button" class="btn btn-vt-ghost btn-sm">VNPay</button>
+            </div>
+          </div>
+          <div class="pay-panel d-none" id="panelCard">
+            <form class="row g-3">
+              <div class="col-12">
+                <label class="form-label-vt">Số thẻ</label>
+                <input type="text" class="form-control form-control-vt" placeholder="1234 5678 9012 3456">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label-vt">Tên chủ thẻ</label>
+                <input type="text" class="form-control form-control-vt" placeholder="NGUYEN THI MAI">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label-vt">Ngày hết hạn</label>
+                <input type="text" class="form-control form-control-vt" placeholder="MM/YY">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label-vt">CVV</label>
+                <input type="text" class="form-control form-control-vt" placeholder="•••">
+              </div>
+            </form>
+          </div>
+          <div class="pay-panel d-none" id="panelOffice">
+            <p class="small text-muted-vt mb-0 border rounded-3 p-3 bg-sand-deep">Đơn của bạn sẽ được giữ chỗ trong <strong>24 giờ</strong>. Vui lòng đến văn phòng VietTrail gần nhất để hoàn tất thanh toán.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ CẢNH BÁO BẢO MẬT ============ -->
+      <div class="security-note mb-4">
+        <i class="bi bi-shield-lock-fill"></i>
+        <div class="small">
+          <strong class="d-block mb-1">Thanh toán được bảo mật</strong>
+          Toàn bộ thông tin thanh toán được mã hoá theo chuẩn SSL 256-bit. VietTrail không lưu trữ thông tin thẻ của bạn.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============ BẢNG TỔNG TIỀN ============ -->
+    <div class="col-lg-4">
+      <div class="summary-box">
+        <h6 class="fw-bold mb-3">Chi tiết thanh toán</h6>
+        <div class="line"><span>Người lớn x2</span><strong>10.580.000₫</strong></div>
+        <div class="line"><span>Trẻ em x1</span><strong>2.650.000₫</strong></div>
+        <div class="line"><span>Bảo hiểm du lịch x2</span><strong>198.000₫</strong></div>
+        <div class="line"><span>Thuế & phí dịch vụ</span><strong>150.000₫</strong></div>
+        <div class="line text-sunset"><span>Giảm giá (SUMMER26)</span><strong>-500.000₫</strong></div>
+        <div class="total-row">
+          <span class="fw-semibold">Tổng thanh toán</span>
+          <span class="new-price">13.078.000₫</span>
+        </div>
+
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" id="agreeTerms" checked>
+          <label class="form-check-label small" for="agreeTerms">
+            Tôi đã đọc và đồng ý với <a href="#" class="text-ocean fw-semibold">Điều khoản dịch vụ</a> và <a href="#" class="text-ocean fw-semibold">Chính sách hủy tour</a> của VietTrail.
+          </label>
+        </div>
+
+        <button class="btn btn-vt-primary w-100 mt-3">Xác nhận thanh toán <i class="bi bi-lock-fill ms-1"></i></button>
+        <a href="booking.html" class="btn btn-vt-ghost w-100 mt-2">Quay lại</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand"><span class="brand-mark">✈</span> VietTrail</div>
+        <p class="small mb-3">VietTrail đồng hành cùng bạn khám phá mọi miền đất nước Việt Nam với những hành trình trọn vẹn và an tâm nhất.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6>Khám phá</h6>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#">Tour trong nước</a></li>
+          <li><a href="#">Tour nước ngoài</a></li>
+          <li><a href="#">Combo khách sạn</a></li>
+          <li><a href="#">Vé máy bay</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6>Hỗ trợ</h6>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Chính sách hủy tour</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h6>Nhận ưu đãi mới nhất</h6>
+        <p class="small">Đăng ký để nhận thông tin tour & ưu đãi hấp dẫn mỗi tuần.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email của bạn">
+          <button class="btn btn-vt-primary" type="submit"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VietTrail. Đã đăng ký bản quyền.</span>
+      <div class="payment-icons">
+        <span>VISA</span><span>MC</span><span>MoMo</span><span>ZaloPay</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  document.querySelectorAll('.pay-method').forEach(function(item){
+    item.addEventListener('click', function(){
+      document.querySelectorAll('.pay-method').forEach(function(el){ el.classList.remove('selected'); el.querySelector('input').checked=false; });
+      document.querySelectorAll('.pay-panel').forEach(function(p){ p.classList.add('d-none'); });
+      item.classList.add('selected');
+      item.querySelector('input').checked = true;
+      document.getElementById(item.dataset.target).classList.remove('d-none');
+    });
+  });
+</script>
+</body>
+</html>
