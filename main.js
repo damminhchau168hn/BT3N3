@@ -1,6 +1,3 @@
-/* =========================================================
-   VIETTRAIL — SHARED SCRIPT (header, footer, tiện ích chung)
-   ========================================================= */
 document.addEventListener("DOMContentLoaded", function () {
 
   /* --- Toggle menu mobile (header) --- */
